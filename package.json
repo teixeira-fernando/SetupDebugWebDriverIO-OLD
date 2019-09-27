@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/wdio wdio.conf.js",
-    //"zalenium:setup": "docker run --rm -ti --name zalenium -p 4444:4444 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/videos:/home/seluser/videos --privileged dosel/zalenium start --chromeContainers 3 --firefoxContainers 2",
     "zalenium:setup": "docker run --rm -ti --name zalenium -p 4444:4444 -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/videos:/home/seluser/videos --privileged dosel/zalenium start --maxTestSessions 6",
     "zalenium:down": "docker stop zalenium"
   },
@@ -19,6 +18,7 @@
     "@wdio/selenium-standalone-service": "^5.9.3",
     "@wdio/spec-reporter": "^5.9.3",
     "@wdio/sync": "^5.10.8",
-    "webdriverio": "^5.10.10"
+    "webdriverio": "^5.10.10",
+    "@types/webdriverio": "^4.13.0"
   }
 }

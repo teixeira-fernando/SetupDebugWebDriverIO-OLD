@@ -7,8 +7,12 @@ describe('webdriver.io page', function() {
         // Note you can also set this globally in mochaOpts in wdio.conf.js:
         this.timeout(10 * 60 * 1000);
 
-        browser.url('http://webdriver.io');
+        browser.url('http://webdriver.io');    
         var title = browser.getTitle();
+        
+        // to fail to verify the debug mode
+        var elemento = $('abc');
+        elemento.click();
         assert.equal(title, 'WebdriverIO · Next-gen WebDriver test framework for Node.js');
     });
 });
